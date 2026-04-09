@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 174 72% 52%;
+    --primary-foreground: 220 20% 7%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 210 20% 82%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 215 15% 52%;
+
+    --accent: 174 72% 52%;
+    --accent-foreground: 220 20% 7%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 174 72% 52%;
+
+    --radius: 0.75rem;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 20% 7%;
+    --success: 142 71% 45%;
+    --success-foreground: 220 20% 7%;
+    --info: 199 89% 48%;
+    --info-foreground: 220 20% 7%;
+
+    --glow-primary: 0 0 20px hsl(174 72% 52% / 0.15);
+    --glow-strong: 0 0 30px hsl(174 72% 52% / 0.25);
+
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 210 20% 82%;
+    --sidebar-primary: 174 72% 52%;
+    --sidebar-primary-foreground: 220 20% 7%;
+    --sidebar-accent: 220 14% 14%;
+    --sidebar-accent-foreground: 210 20% 82%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 174 72% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-strong {
+    box-shadow: var(--glow-strong);
+  }
+
+  .sql-keyword {
+    color: hsl(174 72% 62%);
+    font-weight: 600;
+  }
+
+  .sql-string {
+    color: hsl(38 92% 60%);
+  }
+
+  .sql-number {
+    color: hsl(280 60% 70%);
+  }
+
+  .sql-comment {
+    color: hsl(215 15% 42%);
+    font-style: italic;
+  }
+}
